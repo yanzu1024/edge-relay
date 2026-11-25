@@ -1,0 +1,33 @@
+# Merge these patterns into an existing .gitignore instead of overwriting it.
+
+# Build output
+/build/
+/build-*/
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/CTestTestfile.cmake
+/compile_commands.json
+/Testing/
+
+# Runtime databases, recordings, logs, reports and source candidates
+/run/
+
+# Downloaded documentation/source archives at the repository root
+/EdgeRelay*.zip
+/EdgeRelay*.tar.gz
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local Qt Creator configuration
+/.qtcreator/
+*.user
+*.user.*
+/CMakeUserPresets.json
+
+# Desktop metadata
+.DS_Store
+Thumbs.db

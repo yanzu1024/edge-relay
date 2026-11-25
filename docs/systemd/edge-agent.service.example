@@ -1,0 +1,21 @@
+# Example only. Deployment and service lifecycle have not been validated.
+[Unit]
+Description=EdgeRelay Agent
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=edgerelay
+Group=edgerelay
+WorkingDirectory=/opt/edge-relay
+ExecStart=/opt/edge-relay/bin/edge-agent --config /opt/edge-relay/config/release.yml --run --jsonl
+Restart=on-failure
+RestartSec=3
+KillSignal=SIGTERM
+TimeoutStopSec=12
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
