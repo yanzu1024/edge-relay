@@ -1,0 +1,32 @@
+{
+    "schema_version":1,
+    "device_id":"sim-001",
+    "session_id":"184ab3d6-d911-44d5-821f-0123456789ab",
+    "sequence":1,
+    "observed_at_ms":1792713600000,
+    "metric":"temperature",
+    "value":23.5,
+    "unit":"degC"
+}
+
+{
+    "schema_version":1,
+    "device_id":"sim-001",
+    "session_id":"184ab3d6-d911-44d5-821f-0123456789ab",
+    "sequence":2,
+    "observed_at_ms":1792713600200,
+    "metric":"vibration",
+    "value":0.8,
+    "unit":"mm_s"
+}
+
+{
+    "schema_version":1,
+    "device_id":"sim-001",
+    "session_id":"184ab3d6-d911-44d5-821f-0123456789ab",
+    "sequence":3,
+    "observed_at_ms":1792713600400,
+    "metric":"displacement",
+    "value":1.2,
+    "unit":"mm"
+}

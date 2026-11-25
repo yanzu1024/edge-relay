@@ -1,0 +1,24 @@
+version: 1
+
+agent:
+  id: demo-agent
+  log_level: info
+
+tcp:
+  bind: 127.0.0.1
+  port: 19090
+  max_payload_bytes: 4096
+  partial_timeout_ms: 3000
+
+storage:
+  path: ../run/agent/outbox.db
+
+upload:
+  url: http://127.0.0.1:18080/v1/events/batch
+
+recording:
+  enabled: false
+  directory: ../run/agent/raw
+
+status:
+  file: ../run/agent/status.json

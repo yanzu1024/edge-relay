@@ -1,0 +1,32 @@
+version: 1
+
+agent:
+  id: release-agent
+  log_level: info
+
+tcp:
+  bind: 127.0.0.1
+  port: 19090
+  max_connections: 8
+  max_payload_bytes: 4096
+  partial_timeout_ms: 3000
+
+storage:
+  path: ../run/release-agent/outbox.db
+  max_pending_records: 10000
+  max_total_records: 50000
+  acked_keep_days: 7
+  acked_keep_max_records: 40000
+
+upload:
+  url: http://127.0.0.1:18080/v1/events/batch
+
+recording:
+  enabled: true
+  directory: ../run/release-agent/raw
+  max_file_bytes: 4194304
+  keep_closed_files: 8
+
+status:
+  interval_ms: 1000
+  file: ../run/release-agent/status.json
